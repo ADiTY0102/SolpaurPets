@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://sydneylawgroup.com.au/wp-content/uploads/2021/03/twogoodlogo-dark-300x300.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="/style/dashboard.css">
+    <title>ResQPets Dashboard</title>
+</head>
+<body>
+    <!-- Sidebar Toggle Button (Visible on Small Screens) -->
+    <button data-drawer-target="default-sidebar" data-drawer-toggle="default-sidebar" aria-controls="default-sidebar" type="button" class="sidebar-toggle">
+        <span class="sr-only">Open sidebar</span>
+        <i class="ri-menu-line sidebar-icon"></i>
+    </button>
+
+    <!-- Sidebar -->
+    <aside id="default-sidebar" class="sidebar" aria-label="Sidebar">
+        <div class="sidebar-content">
+            <img src="/assets/logo bgrem.png" alt="logo" class="sidebar-logo">
+            <ul class="sidebar-list">
+                <li>
+                    <a href="/pages/adminDashboard.html" class="sidebar-item" id="active">
+                        <i class="ri-dashboard-fill sidebar-item-icon shrink-0"></i>
+                        <span class="sidebar-item-text">Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/pages/users.html" class="sidebar-item">
+                        <i class="ri-user-line sidebar-item-icon shrink-0"></i>
+                        <span class="sidebar-item-text">Users</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/pages/volunteer.html" class="sidebar-item">
+                        <i class="ri-group-line sidebar-item-icon shrink-0"></i>
+                        <span class="sidebar-item-text">Volunteers</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/pages/payments.html" class="sidebar-item">
+                        <i class="ri-wallet-line sidebar-item-icon shrink-0"></i>
+                        <span class="sidebar-item-text">Payments</span>
+                        <span class="sidebar-badge notification">3</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/pages/rescue.html" class="sidebar-item">
+                        <i class="ri-hand-heart-line sidebar-item-icon shrink-0"></i>
+                        <span class="sidebar-item-text">Rescue</span>
+                        <span class="sidebar-badge notification">1</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/pages/adminManager.html" class="sidebar-item">
+                        <i class="ri-user-settings-line sidebar-item-icon shrink-0"></i>
+                        <span class="sidebar-item-text">Admin Manager</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/pages/login-admin.html" class="sidebar-item">
+                        <i class="ri-login-box-line sidebar-item-icon shrink-0"></i>
+                        <span class="sidebar-item-text">Sign In</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="content-container">
+            <h1 class="dashboard-title">ADMIN DASHBOARD</h1>
+            <div class="cards-container">
+                <div class="cards-main">
+                    <div class="card large" id="card1">
+                        <h3 class="card-title">New Users</h3>
+                        <div class="table-container">
+                            <table class="table">
+                                <thead class="table-head">
+                                    <tr>
+                                        <th scope="col" class="table-head-cell">User Name</th>
+                                        <th scope="col" class="table-head-cell">Mobile No</th>
+                                        <th scope="col" class="table-head-cell">Location</th>
+                                        <th scope="col" class="table-head-cell">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-row">
+                                        <th scope="row" class="table-cell table-cell-bold">Aditya Binjagermath</th>
+                                        <td class="table-cell">8767598748</td>
+                                        <td class="table-cell">Jule Solapur</td>
+                                        <td class="table-cell">
+                                            <a href="#" class="table-action-link">View</a>
+                                        </td>
+                                    </tr>
+                                    <tr class="table-row">
+                                        <th scope="row" class="table-cell table-cell-bold">Sandesh Fand</th>
+                                        <td class="table-cell">9874887675</td>
+                                        <td class="table-cell">Ashok Chawk</td>
+                                        <td class="table-cell">
+                                            <a href="#" class="table-action-link">View</a>
+                                        </td>
+                                    </tr>
+                                    <tr class="table-row">
+                                        <th scope="row" class="table-cell table-cell-bold">Anushka Jain</th>
+                                        <td class="table-cell">9874878596</td>
+                                        <td class="table-cell">Ledies Hostel WIT</td>
+                                        <td class="table-cell">
+                                            <a href="#" class="table-action-link">View</a>
+                                        </td>
+                                    </tr>
+                                    <tr class="table-row">
+                                        <th scope="row" class="table-cell table-cell-bold">Aditya Dhepe</th>
+                                        <td class="table-cell">9568742560</td>
+                                        <td class="table-cell">Solapur</td>
+                                        <td class="table-cell">
+                                            <a href="#" class="table-action-link">View</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <a href="/pages/users.html" class="button-link">View More <i class="ri-arrow-right-up-line"></i></a>
+                    </div>
+                    <div class="card large" id="card2">
+                        <h3 class="card-title">Volunteers</h3>
+                        <div class="table-container">
+                            <table class="table">
+                                <thead class="table-head">
+                                    <tr>
+                                        <th scope="col" class="table-head-cell">User Name</th>
+                                        <th scope="col" class="table-head-cell">Mobile No</th>
+                                        <th scope="col" class="table-head-cell">Location</th>
+                                        <th scope="col" class="table-head-cell">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-row">
+                                        <th scope="row" class="table-cell table-cell-bold">Aditya Binjagermath</th>
+                                        <td class="table-cell">8767598748</td>
+                                        <td class="table-cell">Jule Solapur</td>
+                                        <td class="table-cell">
+                                            <a href="#" class="table-action-link">View</a>
+                                        </td>
+                                    </tr>
+                                    <tr class="table-row">
+                                        <th scope="row" class="table-cell table-cell-bold">Sandesh Fand</th>
+                                        <td class="table-cell">9874887675</td>
+                                        <td class="table-cell">Ashok Chawk</td>
+                                        <td class="table-cell">
+                                            <a href="#" class="table-action-link">View</a>
+                                        </td>
+                                    </tr>
+                                    <tr class="table-row">
+                                        <th scope="row" class="table-cell table-cell-bold">Anushka Jain</th>
+                                        <td class="table-cell">9874878596</td>
+                                        <td class="table-cell">Ledies Hostel WIT</td>
+                                        <td class="table-cell">
+                                            <a href="#" class="table-action-link">View</a>
+                                        </td>
+                                    </tr>
+                                    <tr class="table-row">
+                                        <th scope="row" class="table-cell table-cell-bold">Aditya Dhepe</th>
+                                        <td class="table-cell">9568742560</td>
+                                        <td class="table-cell">Solapur</td>
+                                        <td class="table-cell">
+                                            <a href="#" class="table-action-link">View</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <a href="/pages/volunteer.html" class="button-link">View More <i class="ri-arrow-right-up-line"></i></a>
+                    </div>
+                </div>
+                <div class="cards-side">
+                    <div class="card small" id="card3">
+                        <h3 class="card-title">Donations</h3>
+                        <p class="card-value">Rs. 85,000</p>
+                        <p class="card-description">Total donations received this month.</p>
+                        <div class="table-container">
+                            <table class="table">
+                                <thead class="table-head">
+                                    <tr>
+                                        <th scope="col" class="table-head-cell">User Name</th>
+                                        <th scope="col" class="table-head-cell">Mobile No</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-row">
+                                        <th scope="row" class="table-cell table-cell-bold">Aditya Binjagermath</th>
+                                        <td class="table-cell">8767598748</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <a href="/pages/payments.html" class="button-link">View More <i class="ri-arrow-right-up-line"></i></a>
+                    </div>
+                    <div class="card small" id="card4">
+                        <h3 class="card-title">Rescue Queries</h3>
+                        <p class="card-value">150</p>
+                        <p class="card-description">Pending rescue queries to address.</p>
+                        <a href="./rescue.html" class="button-link">View More <i class="ri-arrow-right-up-line"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/javascript/dashboard.js"></script>
+</body>
+</html>

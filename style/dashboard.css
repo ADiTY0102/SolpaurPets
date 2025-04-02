@@ -1,0 +1,533 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Futura", "Futura PT", sans-serif; /* Futura and Futura PT with sans-serif fallback */
+    background-color: #fefefe; /* White background */
+    color: #000000; /* Black font */
+    height: 100vh;
+    overflow-y: hidden;
+    display: flex;
+}
+.sidebar-logo {
+    width: 80px;
+    height: 60px;
+    margin: 0 auto 0.5rem;
+    display: block;
+}
+
+.sidebar-logo {
+    width: 80px;
+    height: 60px;
+    margin: 20px 40px;
+    display: block;
+}
+
+/* Sidebar Toggle Button */
+.sidebar-toggle {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    margin-left: 0.75rem;
+    font-size: 0.875rem;
+    color: #000000; /* Black font */
+    border-radius: 0.5rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.sidebar-toggle:hover {
+    background-color: #e0e0e0; /* Light gray hover effect */
+}
+
+.sidebar-toggle:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2); /* Black focus ring */
+}
+
+.sidebar-icon {
+    font-size: 1.5rem; /* Size for toggle button icon */
+    line-height: 1; /* Ensure proper alignment */
+}
+
+/* Screen Reader Only */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 40;
+    width: 12rem;
+    height: 100vh;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    background-color: #efefef; /* White background */
+    /* border-right: 1px solid #000000;  Black border for contrast */
+    list-style-type: none;
+}
+
+.sidebar ul {
+    list-style-type: none;
+}
+
+.sidebar-content {
+    height: 100%;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    font-weight: 500;
+    flex: 1;
+    overflow-y: hidden;
+}
+
+.sidebar-item {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    color: #000000; /* Black font */
+    border-radius: 0.5rem;
+    text-decoration: none;
+    transition: background-color 0.2s;
+    font-family: 'Futura PT', sans-serif;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.sidebar-item:hover {
+    background-color: #e0e0e0; /* Light gray hover effect */
+}
+
+.sidebar-item-icon {
+    font-size: 1rem; /* Size for sidebar item icons */
+    color: #000000; /* Black icon */
+    transition: color 0.075s;
+    line-height: 1; /* Ensure proper alignment */
+    display: inline-flex; /* Ensure consistent alignment */
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.5rem; /* Match the previous margin-left of sidebar-item-text */
+}
+
+.sidebar-item:hover .sidebar-item-icon {
+    color: #000000; /* Black icon on hover */
+}
+
+.sidebar-item-text {
+    white-space: nowrap;
+    font-size: 0.875rem;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.shrink-0 {
+    flex-shrink: 0;
+}
+
+.sidebar-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0.5rem;
+    margin-left: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #000000; /* Black font */
+    background-color: #e0e0e0; /* Light gray background */
+    border-radius: 9999px;
+}
+
+.sidebar-badge.notification {
+    width: 0.75rem;
+    height: 0.75rem;
+    padding: 0.5rem;
+    color: #000000; /* Black font */
+    background-color: #d0d0d0; /* Slightly darker gray for notification */
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 0;
+    margin-left: 0;
+    height: 100vh;
+}
+
+.content-container {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: #ffffff; /* White background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle black shadow */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
+}
+
+.dashboard-title {
+    font-size: 8vh;
+    margin-top: 10px;
+    font-weight: 600;
+    color: #000000; /* Black font */
+    margin-bottom: 0.5rem;
+}
+
+/* Cards Layout */
+.cards-container {
+    display: flex;
+    gap: 0.5rem;
+    flex: 1;
+}
+
+.cards-main {
+    flex: 0 0 70%;
+    display: flex;
+    gap: 0.5rem;
+    font-family: 'Futura PT', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+.cards-side {
+    flex: 0 0 23%; 
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    height: 83.7%;
+    font-family: 'Futura PT', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+.card {
+    background-color: #f0f0f0; /* Very light gray for cards to distinguish from white background */
+    border-radius: 0.5rem;
+    padding: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtle black shadow */
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    height: 80.7%;
+}
+
+.card .card-title {
+    font-size: 4.5vh;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.card.large {
+    flex: 1;
+}
+.card.small {
+    height: 200px;
+}
+#card1, #card2 {
+    flex: 1;
+}
+
+#card3, #card4 {
+    flex: 1;
+}
+
+#active{
+    background-color: #ffffff;
+}
+.sidebar-content .footer{
+    
+    /* z-index: -999; */
+    margin-bottom: 20vh;
+}
+.footer .icons{
+    display: inline;
+    margin-bottom: 20px;
+}
+
+/* .card-title {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #000000;  Black font 
+} */
+
+.card-value {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #000000; /* Black font */
+}
+
+.card-description {
+    font-size: 0.75rem;
+    color: #000000; /* Black font */
+}
+
+a{
+    text-decoration: none;
+    color:white;
+    
+    font-size: 15px;
+    text-align: center;
+}
+.button-link {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 18px 2px;
+    height: 20px;
+    width: 90px;
+    background-color: #000000;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: 'Futura PT', sans-serif;
+}
+.button-link:hover {
+    background-color: #1d4ed8;
+}
+/* Responsive Design */
+@media (min-width: 640px) {
+    .sidebar-toggle {
+        display: none;
+    }
+
+    .sidebar {
+        transform: translateX(0);
+    }
+
+    .main-content {
+        margin-left: 12rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .cards-container {
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+
+    .cards-main {
+        flex: 1;
+        flex-direction: column;
+    }
+
+    .cards-side {
+        flex: 1;
+        flex-direction: row;
+    }
+
+    .card.large,
+    .card.small {
+        flex: none;
+        height: 8rem;
+    }
+
+    .dashboard-title {
+        font-size: 1rem;
+    }
+
+    .card-title {
+        font-size: 0.875rem;
+    }
+
+    .card-value {
+        font-size: 1.25rem;
+    }
+
+    .card-description {
+        font-size: 0.675rem;
+    }
+}
+
+/* Light Mode */
+@media (prefers-color-scheme: Light) {
+    body {
+        background-color: #000000; /* Black background for dark mode */
+        color: #ffffff; /* White font for dark mode */
+    }
+
+    .sidebar-toggle {
+        color: #ffffff;
+    }
+
+    .sidebar-toggle:hover {
+        background-color: #333333; /* Dark gray hover effect */
+    }
+
+    .sidebar-toggle:focus {
+        box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
+    }
+
+    .sidebar {
+        background-color: #000000;
+        border-right: 1px solid #ffffff;
+    }
+
+    .sidebar-title {
+        color: #ffffff;
+    }
+
+    .sidebar-item {
+        color: #ffffff;
+    }
+
+    .sidebar-item:hover {
+        background-color: #333333;
+    }
+
+    .sidebar-item-icon {
+        color: #ffffff;
+    }
+
+    .sidebar-item:hover .sidebar-item-icon {
+        color: #ffffff;
+    }
+
+    .sidebar-badge {
+        color: #ffffff;
+        background-color: #333333;
+    }
+
+    .sidebar-badge.notification {
+        color: #ffffff;
+        background-color: #444444;
+    }
+
+    .content-container {
+        background-color: #000000;
+        box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+    }
+
+    .dashboard-title {
+        color: #ffffff;
+    }
+
+    .card {
+        background-color: #222222; /* Dark gray for cards in dark mode */
+    }
+
+    .card-title {
+        color: #ffffff;
+    }
+
+    .card-value {
+        color: #ffffff;
+    }
+
+    .card-description {
+        color: #ffffff;
+    }
+}
+
+
+
+/* Table Container */
+.table-container {
+    position: relative;
+    overflow-x: auto; /* Equivalent to overflow-x-auto */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Equivalent to shadow-md */
+    border-radius: 0.5rem; /* Equivalent to sm:rounded-lg */
+}
+
+/* Table */
+.table {
+    width: 100%; /* Equivalent to w-full */
+    font-size: 0.875rem; /* Equivalent to text-sm */
+    text-align: left; /* Equivalent to text-left */
+    color: #4b5563; /* Equivalent to text-gray-500 */
+}
+
+/* Table Head */
+.table-head {
+    font-size: 0.75rem; /* Equivalent to text-xs */
+    text-transform: uppercase; /* Equivalent to uppercase */
+    background-color: #f9fafb; /* Equivalent to bg-gray-50 */
+    color: #374151; /* Equivalent to text-gray-700 */
+}
+
+/* Table Head Cell */
+.table-head-cell {
+    padding: 0.75rem 1.5rem; /* Equivalent to px-6 py-3 */
+}
+
+/* Table Row */
+.table-row {
+    background-color: #ffffff; /* Equivalent to bg-white */
+    border-bottom: 1px solid #e5e7eb; /* Equivalent to border-b border-gray-200 */
+}
+
+/* Table Cell */
+.table-cell {
+    padding: 1rem 1.5rem; /* Equivalent to px-6 py-4 */
+}
+
+/* Table Cell Bold (for product names) */
+.table-cell-bold {
+    font-weight: 500; /* Equivalent to font-medium */
+    color: #111827; /* Equivalent to text-gray-900 */
+    white-space: nowrap; /* Equivalent to whitespace-nowrap */
+}
+
+/* Table Action Link */
+.table-action-link {
+    font-weight: 500; /* Equivalent to font-medium */
+    color: #2563eb; /* Equivalent to text-blue-600 */
+    text-decoration: none;
+}
+
+.table-action-link:hover {
+    text-decoration: underline; /* Equivalent to hover:underline */
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: #1f2937; /* Dark background */
+        color: #9ca3af; /* Equivalent to dark:text-gray-400 */
+    }
+
+    .table {
+        color: #9ca3af; /* Equivalent to dark:text-gray-400 */
+    }
+
+    .table-head {
+        background-color: #374151; /* Equivalent to dark:bg-gray-700 */
+        color: #9ca3af; /* Equivalent to dark:text-gray-400 */
+    }
+
+    .table-row {
+        background-color: #1f2937; /* Equivalent to dark:bg-gray-800 */
+        border-bottom: 1px solid #4b5563; /* Equivalent to dark:border-gray-700 */
+    }
+
+    .table-cell-bold {
+        color: #ffffff; /* Equivalent to dark:text-white */
+    }
+
+    .table-action-link {
+        color: #3b82f6; /* Equivalent to dark:text-blue-500 */
+    }
+}
+
+/* Responsive Design for RTL (Right-to-Left) */
+@media (dir: "rtl") {
+    .table {
+        text-align: right; /* Equivalent to rtl:text-right */
+    }
+}

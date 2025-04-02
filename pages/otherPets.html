@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/adoptionPets.css">
+    <link rel="shortcut icon" href="https://sydneylawgroup.com.au/wp-content/uploads/2021/03/twogoodlogo-dark-300x300.png" type="image/x-icon">
+    <title>Other Pet Adoption</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <a href="#">
+                <img src="https://sydneylawgroup.com.au/wp-content/uploads/2021/03/twogoodlogo-dark-300x300.png" alt="Logo" class="logo-image">
+            </a>
+        </div>
+        <div class="navbar-search">
+            <input type="text" id="searchInput" placeholder="Search by pet name..." class="search-input">
+        </div>
+        <div class="navbar-home">
+            <a href="/index.html" class="home-button">Home</a>
+        </div>
+        <div class="navbar-filter">
+            <select id="breedFilter" class="filter-select">
+                <option value="">All Breeds</option>
+                <option value="Lop Rabbit">Lop Rabbit</option>
+                <option value="Parrot">Parrot</option>
+                <option value="Turtle">Turtle</option>
+                <option value="Hamster">Hamster</option>
+            </select>
+        </div>
+    </nav>
+
+    <!-- Pet Cards Container -->
+    <main class="main-content">
+        <div id="petCards" class="pet-cards-container">
+            <!-- Pet cards will be dynamically added here -->
+        </div>
+    </main>
+
+    <script src="/javascript/adoption.js"></script>
+</body>
+</html>

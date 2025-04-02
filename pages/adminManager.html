@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/admnUsersVolunteers.css">
+    <link rel="shortcut icon"
+        href="https://sydneylawgroup.com.au/wp-content/uploads/2021/03/twogoodlogo-dark-300x300.png"
+        type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+    <title>Rescue</title>
+</head>
+
+<body>
+    <!-- Sidebar Toggle Button (Visible on Small Screens) -->
+    <button data-drawer-target="default-sidebar" data-drawer-toggle="default-sidebar" aria-controls="default-sidebar"
+        type="button" class="sidebar-toggle">
+        <span class="sr-only">Open sidebar</span>
+        <i class="ri-menu-line sidebar-icon"></i>
+    </button>
+
+    <!-- Sidebar -->
+    <aside id="default-sidebar" class="sidebar" aria-label="Sidebar">
+        <div class="sidebar-content">
+            <img src="/assets/logo bgrem.png" alt="logo" class="sidebar-logo">
+            <ul class="sidebar-list">
+                <li>
+                    <a href="/pages/adminDashboard.html" class="sidebar-item">
+                        <i class="ri-dashboard-fill sidebar-item-icon shrink-0"></i>
+                        <span class="sidebar-item-text">Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/pages/users.html" class="sidebar-item">
+                        <i class="ri-user-line sidebar-item-icon shrink-0"></i>
+                        <span class="sidebar-item-text">Users</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/pages/volunteer.html" class="sidebar-item">
+                        <i class="ri-group-line sidebar-item-icon shrink-0"></i>
+                        <span class="sidebar-item-text">Volunteers</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/pages/payments.html" class="sidebar-item">
+                        <i class="ri-wallet-line sidebar-item-icon shrink-0"></i>
+                        <span class="sidebar-item-text">Payments</span>
+                        <span class="sidebar-badge notification">3</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/pages/rescue.html" class="sidebar-item">
+                        <i class="ri-hand-heart-line sidebar-item-icon shrink-0"></i>
+                        <span class="sidebar-item-text">Rescue</span>
+                        <span class="sidebar-badge notification">1</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/pages/adminManager.html" class="sidebar-item" id="active">
+                        <i class="ri-user-settings-line sidebar-item-icon shrink-0"></i>
+                        <span class="sidebar-item-text">Admin Manager</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/pages/login-admin.html" class="sidebar-item">
+                        <i class="ri-login-box-line sidebar-item-icon shrink-0"></i>
+                        <span class="sidebar-item-text">Sign In</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+
+    </aside>
+
+    <!-- Main -->
+    <main class="main">
+        <div class="content-container">
+            <h1 class="dashboard-title" style="text-transform: uppercase;">ADMIN MANAGER</h1>
+            <div class="main-container">
+                <div class="container">Add Admin
+                    <a href="login-admin.html" class="button-link">ADD <i class="ri-arrow-right-up-line"></i></a>
+                </div>
+                <div class="container">Update Admin
+                    <a href="rescue.html" class="button-link">UPDATE <i class="ri-arrow-right-up-line"></i></a>
+                </div>
+                <div class="container">Delete Admin
+                    <a href="rescue.html" class="button-link">DELETE <i class="ri-arrow-right-up-line"></i></a>
+                </div>
+            </div>
+            <p>All The Queries Listed</p>
+            <div class="table-section">
+                <div class="table-header">
+                    <div>
+                        <button id="dropdownActionButton" data-dropdown-toggle="dropdownAction" class="action-button"
+                            type="button">
+                            <span class="sr-only">Action button</span>
+                            Action
+                            <svg class="dropdown-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m1 1 4 4 4-4" />
+                            </svg>
+                        </button>
+                        <!-- Dropdown menu -->
+                        <div id="dropdownAction" class="dropdown-menu hidden">
+                            <ul class="dropdown-list" aria-labelledby="dropdownActionButton">
+                                <li>
+                                    <a href="#" class="dropdown-item">Email Admin</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="dropdown-item">Delete Admin</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <label for="table-search-users" class="sr-only">Search</label>
+                    <div class="search-container">
+                        <div class="search-icon-container">
+                            <svg class="search-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 20 20">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                            </svg>
+                        </div>
+                        <input type="text" id="table-search-users" class="search-input" placeholder="Search for users">
+                    </div>
+                </div>
+                <table class="table">
+                    <thead class="table-head">
+                        <tr>
+                            <th scope="col" class="table-head-cell checkbox-cell">
+                                <div class="checkbox-container">
+                                    <input id="checkbox-all-search" type="checkbox" class="checkbox">
+                                    <label for="checkbox-all-search" class="sr-only">checkbox</label>
+                                </div>
+                            </th>
+                            <th scope="col" class="table-head-cell">Name</th>
+                            <th scope="col" class="table-head-cell">Adress</th>
+                            <th scope="col" class="table-head-cell">Contact</th>
+                            <th scope="col" class="table-head-cell">Detailed Query</th>
+                            <th scope="col" class="table-head-cell">Animal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="table-row">
+                            <td class="table-cell checkbox-cell">
+                                <div class="checkbox-container">
+                                    <input id="checkbox-table-search-1" type="checkbox" class="checkbox">
+                                    <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
+                                </div>
+                            </td>
+                            <th scope="row" class="table-cell user-info">
+                                <img class="user-avatar" src="/assets/dog.png" alt="image">
+                                <div class="user-details">
+                                    <div class="user-name">Aditya Binjagermath</div>
+                                    <div class="user-email">aditya2202@gmail.com</div>
+                                </div>
+                            </th>
+                            <td class="table-cell">221/222 Shivganga Nagar Part2 Jule Solapur </td>
+                            <td class="table-cell">8767598748</td>
+                            <td class="table-cell">I had accidently found a dog , bleeding from his left leg , urgently
+                                need a help</td>
+                            <td class="table-cell">Dog</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <script src="/javascript/dropdown-action.js"></script>
+</body>
+
+</html>

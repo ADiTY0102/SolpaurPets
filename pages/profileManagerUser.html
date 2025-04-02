@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon"
+        href="https://sydneylawgroup.com.au/wp-content/uploads/2021/03/twogoodlogo-dark-300x300.png"
+        type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="/style/dashboard-userProfileManager.css">
+    <title>Profile Manager</title>
+</head>
+
+<body>
+    <!-- Sidebar Toggle Button (Visible on Small Screens) -->
+    <button data-drawer-target="default-sidebar" data-drawer-toggle="default-sidebar" aria-controls="default-sidebar"
+        type="button" class="sidebar-toggle">
+        <span class="sr-only">Open sidebar</span>
+        <i class="ri-menu-line sidebar-icon"></i>
+    </button>
+
+    <!-- Sidebar -->
+    <aside id="default-sidebar" class="sidebar" aria-label="Sidebar">
+        <div class="sidebar-content">
+            <img src="/assets/logo bgrem.png" alt="logo" class="sidebar-logo">
+            <ul class="sidebar-list">
+                <li>
+                    <a href="/pages/userDashboard.html" class="sidebar-item">
+                        <i class="ri-dashboard-fill sidebar-item-icon shrink-0"></i>
+                        <span class="sidebar-item-text">Profile</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/pages/index.html" class="sidebar-item">
+                        <i class="ri-user-line sidebar-item-icon shrink-0"></i>
+                        <span class="sidebar-item-text">Pet Adoption</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/pages/petDonate.html" class="sidebar-item">
+                        <i class="ri-group-line sidebar-item-icon shrink-0"></i>
+                        <span class="sidebar-item-text">Pet Donation</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/pages/profileMAnagerUser.html" class="sidebar-item" id="active">
+                        <i class="ri-user-settings-line sidebar-item-icon shrink-0"></i>
+                        <span class="sidebar-item-text">Profile Manager</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/pages/login.html" class="sidebar-item">
+                        <i class="ri-login-box-line sidebar-item-icon shrink-0"></i>
+                        <span class="sidebar-item-text">Sign Out</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="form-container">
+        <h1>Profilr Manager</h1>
+        <form class="register-form">
+            <!--  -->
+            <div class="input-group">
+                <label for="floating_company" class="input-label">Address</label>
+                <input type="text" name="floating_company" id="floating_company" class="input-field"
+                    placeholder="Address" required />
+            </div>
+            <div class="input-group">
+                <label for="floating_password" class="input-label">Password</label>
+                <input type="password" name="floating_password" id="floating_password" class="input-field"
+                    placeholder="" required />
+            </div>
+            <div class="input-group">
+                <label for="floating_repeat_password" class="input-label">Confirm password</label>
+                <input type="password" name="repeat_password" id="floating_repeat_password" class="input-field"
+                    placeholder="" required style="color: white;" />
+            </div>
+            <div class="input-group">
+                <label for="floating_first_name" class="input-label">First name</label>
+                <input type="text" name="floating_first_name" id="floating_first_name" class="input-field"
+                    placeholder="First name" required />
+            </div>
+            <div class="input-group">
+                <label for="floating_last_name" class="input-label">Last name</label>
+                <input type="text" name="floating_last_name" id="floating_last_name" class="input-field"
+                    placeholder="Last name" required />
+            </div>
+            <div class="grid-container">
+                <div class="input-group">
+                    <label for="floating_phone" class="input-label">Phone number</label>
+                    <input type="tel" pattern="[6-9][0-9]{9}" name="floating_phone" id="floating_phone"
+                        class="input-field" placeholder="+91 xxxx xxxxxx" required />
+                </div>
+
+                <div class="input-group">
+                    <label for="floating_email" class="input-label">Email address</label>
+                    <input type="email" name="floating_email" id="floating_email" class="input-field"
+                        placeholder="name@company.com" required />
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label class="file-label" for="file_input">Upload file</label>
+                <input class="file-input" id="file_input" type="file">
+            </div>
+
+            <div class="btn">
+                <button type="submit" class="submit-button">Update Details</button>
+                <button type="button" class="submit-button" onclick="window.location.href='index.html'">Back to
+                    Home</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+
+</html>

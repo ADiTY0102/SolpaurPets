@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/adoptionPets.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="shortcut icon"
+        href="https://sydneylawgroup.com.au/wp-content/uploads/2021/03/twogoodlogo-dark-300x300.png"
+        type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+    <title>Adoption-Dog</title>
+</head>
+<body>
+    
+
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <a href="#">
+                <img src="https://sydneylawgroup.com.au/wp-content/uploads/2021/03/twogoodlogo-dark-300x300.png" alt="Logo" class="logo-image">
+            </a>
+        </div>
+        <div class="navbar-search">
+            <input type="text" id="searchInput" placeholder="Search by pet name..." class="search-input">
+        </div>
+        <div class="navbar-home">
+            <a href="/pages/index.html" class="home-button">Home</a>
+        </div>
+        <div class="navbar-filter">
+            <select id="breedFilter" class="filter-select">
+                <option value="">All Breeds</option>
+                <option value="Labrador">Labrador</option>
+                <option value="German Shepherd">German Shepherd</option>
+                <option value="Golden Retriever">Golden Retriever</option>
+                <option value="Bulldog">Bulldog</option>
+            </select>
+        </div>
+    </nav>
+
+    <!-- Pet Cards Container -->
+    <main class="main-content">
+        <div id="petCards" class="pet-cards-container">
+            <!-- Pet cards will be dynamically added here -->
+        </div>
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+        integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/javascript/adoption.js"></script>
+</body>
+</html>

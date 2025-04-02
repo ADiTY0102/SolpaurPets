@@ -1,0 +1,187 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+}
+
+#nav-part1 {
+    text-align: center;
+}
+
+.form-container {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 600px; /* Increased width to accommodate grid layout */
+    margin: 1rem auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.form-container h1 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem; /* Reduced gap between form elements */
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-label {
+    font-size: 0.75rem; /* Reduced font size */
+    color: #000000;
+    margin-bottom: 0.25rem; /* Reduced margin */
+}
+
+.input-field {
+    height: 25px;
+    padding: 0.5rem; /* Reduced padding */
+    font-size: 0.75rem; /* Reduced font size */
+    color: #ffffff;
+    background-color: #000000;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+.input-field::placeholder {
+    color: #c8d7f2;
+}
+
+.grid-container {
+    display: grid;
+    gap: 0.75rem; /* Reduced gap */
+    grid-template-columns: 1fr 1fr; /* Always two columns for better space usage */
+}
+
+.file-label {
+    font-size: 0.75rem; /* Reduced font size */
+    color: #030303;
+    margin-bottom: 0.25rem; /* Reduced margin */
+    display: block;
+}
+
+.file-input {
+    display: block;
+    width: 100%;
+    font-size: 0.75rem; /* Reduced font size */
+    color: #ffffff;
+    background-color: #000000;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem; /* Reduced padding */
+    cursor: pointer;
+}
+
+.file-input::file-selector-button {
+    background-color: #3b82f6;
+    color: #ffffff;
+    border: none;
+    padding: 0.25rem 0.75rem; /* Reduced padding */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.75rem; /* Reduced font size */
+}
+
+.file-input::file-selector-button:hover {
+    background-color: #2563eb;
+}
+
+.btn {
+    display: flex;
+    gap: 0.75rem; /* Reduced gap */
+    margin-top: 0.75rem; /* Reduced margin */
+}
+
+.submit-button {
+    background-color: #3b82f6;
+    color: #ffffff;
+    padding: 0.5rem; /* Reduced padding */
+    font-size: 0.75rem; /* Reduced font size */
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    flex: 1;
+}
+
+.submit-button:hover {
+    background-color: #2563eb;
+}
+
+.login-link {
+    text-align: center;
+    font-size: 0.75rem; /* Reduced font size */
+    color: #000000;
+    margin-top: 0.75rem; /* Reduced margin */
+}
+
+.login-link a {
+    color: #3b82f6;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .form-container {
+        max-width: 90%;
+        padding: 1rem;
+    }
+
+    .form-container h1 {
+        font-size: 1rem;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr; /* Stack fields on smaller screens */
+    }
+
+    .input-field,
+    .file-input {
+        padding: 0.4rem;
+        font-size: 0.7rem;
+    }
+
+    .input-label,
+    .file-label,
+    .submit-button,
+    .login-link {
+        font-size: 0.7rem;
+    }
+
+    .file-input::file-selector-button {
+        padding: 0.2rem 0.5rem;
+        font-size: 0.7rem;
+    }
+
+    .btn {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon"
+        href="https://sydneylawgroup.com.au/wp-content/uploads/2021/03/twogoodlogo-dark-300x300.png"
+        type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="/style/dashboard-PetDonate.css">
+    <title>Donate Pet</title>
+</head>
+
+<body>
+    <!-- Sidebar Toggle Button (Visible on Small Screens) -->
+    <button data-drawer-target="default-sidebar" data-drawer-toggle="default-sidebar" aria-controls="default-sidebar"
+        type="button" class="sidebar-toggle">
+        <span class="sr-only">Open sidebar</span>
+        <i class="ri-menu-line sidebar-icon"></i>
+    </button>
+
+    <!-- Sidebar -->
+    <aside id="default-sidebar" class="sidebar" aria-label="Sidebar">
+        <div class="sidebar-content">
+            <img src="/assets/logo bgrem.png" alt="logo" class="sidebar-logo">
+            <ul class="sidebar-list">
+                <li>
+                    <a href="/pages/userDashboard.html" class="sidebar-item">
+                        <i class="ri-dashboard-fill sidebar-item-icon shrink-0"></i>
+                        <span class="sidebar-item-text">Profile</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/pages/index.html" class="sidebar-item">
+                        <i class="ri-user-line sidebar-item-icon shrink-0"></i>
+                        <span class="sidebar-item-text">Pet Adoption</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/pages/petDonate.html" class="sidebar-item" id="active">
+                        <i class="ri-group-line sidebar-item-icon shrink-0"></i>
+                        <span class="sidebar-item-text">Pet Donation</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/pages/profileMAnagerUser.html" class="sidebar-item">
+                        <i class="ri-user-settings-line sidebar-item-icon shrink-0"></i>
+                        <span class="sidebar-item-text">Profile Manager</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/pages/login.html" class="sidebar-item">
+                        <i class="ri-login-box-line sidebar-item-icon shrink-0"></i>
+                        <span class="sidebar-item-text">Sign Out</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="content">
+            <header class="header">
+                <h1 class="header-title">Pet Donation</h1>
+            </header>
+            <form id="donation-form" class="donation-form">
+                <label for="pet-name">Pet Name:</label>
+                <input type="text" id="pet-name" name="pet-name" required>
+
+                <label for="pet-address">Pet Address</label>
+                <input type="text" id="pet-address" name="pet-address" required>
+
+                <label for="pet-type">Pet Type:</label>
+                <select id="pet-type" name="pet-type" required>
+                    <option value="">Select a type</option>
+                    <option value="dog">Dog</option>
+                    <option value="cat">Cat</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <label for="pet-age">Pet Age:</label>
+                <input type="number" id="pet-age" name="pet-age" required>
+
+                <label for="pet-age">Vaccinated(Y/N)</label>
+                <label for="vaccinated-yes">Yes</label>
+                <input type="radio" id="vaccinated-yes" name="vaccinated" value="yes" required>
+                <label for="vaccinated-yes">No</label>
+                <input type="radio" id="vaccinated-no" name="vaccinated" value="no" required>
+               
+
+                <label for="pet-description">Description:</label>
+                <textarea id="pet-description" name="pet-description" required></textarea>
+
+
+                <label class="file-label" for="file_input">Upload Pet Image</label>
+                <input class="file-input" id="file_input" type="file">
+
+                <button type="submit">Donate Pet</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+
+</html>

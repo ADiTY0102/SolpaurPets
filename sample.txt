@@ -1,0 +1,30 @@
+<iframe 
+src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d950.5685270139204!2d75.9078813884854!3d17.63717197484381!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc5da047c04ac4d%3A0x158bdb24075f77b4!2sPatanjali%20Mega%20Store!5e0!3m2!1sen!2sin!4v1741597325808!5m2!1sen!2sin"
+ width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" 
+referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+
+
+we need a card formated profiles for aur dog /pet adoption website
+where we need functionality of filter and search at navbar. 
+
+we also need that when pet profile is created and the profile 
+with #dog should be automatically shown in the cards form on the dogPet.html 
+
+we need cards in the form of an image of pet which will come from his profile and below that pets name will be shown 
+when we hover on image it should be showing info of pet
+            1)name pet
+            2)Age pet
+            3)Vaccinated(y/n)
+            4)Contact No of owner
+            5)Address of owner
+
+here im explaining flow ====
+very first assume that user profile is created 
+user is trying to adopt pet so he will move to filters which ever breed he wants
+you should show like wise 
+
+after in second seanerio user is trying to donate a pet
+at that time he will provide all the details in the form on user dashboard ( i'll create that manualyy you dont need to do that)
+after successfully filling form all the details will be shown on the dogPet.html in the form of card as i told earlier

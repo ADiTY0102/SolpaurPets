@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://sydneylawgroup.com.au/wp-content/uploads/2021/03/twogoodlogo-dark-300x300.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="/style/dashboard-users.css">
+    <title>Profile</title>
+</head>
+<body>
+    <!-- Sidebar Toggle Button (Visible on Small Screens) -->
+    <button data-drawer-target="default-sidebar" data-drawer-toggle="default-sidebar" aria-controls="default-sidebar" type="button" class="sidebar-toggle">
+        <span class="sr-only">Open sidebar</span>
+        <i class="ri-menu-line sidebar-icon"></i>
+    </button>
+
+    <!-- Sidebar -->
+    <aside id="default-sidebar" class="sidebar" aria-label="Sidebar">
+        <div class="sidebar-content">
+            <img src="/assets/logo bgrem.png" alt="logo" class="sidebar-logo">
+            <ul class="sidebar-list">
+                <li>
+                    <a href="/pages/userDashboard.html" class="sidebar-item" id="active">
+                        <i class="ri-dashboard-fill sidebar-item-icon shrink-0"></i>
+                        <span class="sidebar-item-text">Profile</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/pages/index.html" class="sidebar-item">
+                        <i class="ri-user-line sidebar-item-icon shrink-0"></i>
+                        <span class="sidebar-item-text">Pet Adoption</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/pages/petDonate.html" class="sidebar-item">
+                        <i class="ri-group-line sidebar-item-icon shrink-0"></i>
+                        <span class="sidebar-item-text">Pet Donation</span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="/pages/profileMAnagerUser.html" class="sidebar-item">
+                        <i class="ri-user-settings-line sidebar-item-icon shrink-0"></i>
+                        <span class="sidebar-item-text">Profile Manager</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/pages/login.html" class="sidebar-item">
+                        <i class="ri-login-box-line sidebar-item-icon shrink-0"></i>
+                        <span class="sidebar-item-text">Sign Out</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="user-card">
+        <div class="user-card-header">
+            <button id="dropdownButton" class="dropdown-toggle" type="button">
+                <span class="sr-only">Open dropdown</span>
+                <svg class="dropdown-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 3">
+                    <path d="M2 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm6.041 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM14 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z"/>
+                </svg>
+            </button>
+            <div id="dropdown" class="dropdown-menu">
+                <ul class="dropdown-list">
+                    <li>
+                        <a href="#" class="dropdown-item">Edit</a>
+                    </li>
+                    <li>
+                        <a href="#" class="dropdown-item">Export Data</a>
+                    </li>
+                    <li>
+                        <a href="#" class="dropdown-item dropdown-item-danger">Delete</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="user-card-body">
+            <img class="user-card-image" src="/assets/logo.png" alt="Bonnie image"/>
+            <h5 class="user-card-name">aditya virendra binjagermath</h5>
+            <span class="user-card-address">shivganga nagar part2 Jule solpaur</span>
+            <div class="details">
+            <h6 class="user-card-age">age: 21</h6>
+            <h6 class="user-card-phone">Contact No: +91 8767598748</h6>
+            <h6 class="user-card-email">adityabinjagermath12@gmail.com</h6>
+            </div>
+            <div class="user-card-actions">
+                <a href="/pages/index.html" class="action-button primary-button">Home</a>
+                <a href="/pages/index.html/" class="action-button secondary-button">Help</a>
+            </div>
+        </div>
+    </div>
+    
+    <script src="/javascript/dashboardUsers.js"></script>
+</body>
+</html>
