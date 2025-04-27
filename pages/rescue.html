@@ -48,16 +48,16 @@
                 <li>
                     <a href="/pages/rescue.html" class="sidebar-item" id="active">
                         <i class="ri-hand-heart-line sidebar-item-icon shrink-0"></i>
-                        <span class="sidebar-item-text">Rescue</span>
+                        <span class="sidebar-item-text">Adoption Requests</span>
                         <span class="sidebar-badge notification">1</span>
                     </a>
                 </li>
-                <li>
+                <!-- <li>
                     <a href="/pages/adminManager.html" class="sidebar-item">
                         <i class="ri-user-settings-line sidebar-item-icon shrink-0"></i>
                         <span class="sidebar-item-text">Admin Manager</span>
                     </a>
-                </li>
+                </li> -->
                 <li>
                     <a href="/pages/login-admin.html" class="sidebar-item">
                         <i class="ri-login-box-line sidebar-item-icon shrink-0"></i>
@@ -71,9 +71,9 @@
     <!-- Main -->
     <main class="main">
         <div class="content-container">
-            <h1 class="dashboard-title" style="text-transform: uppercase;">Rescue Queries</h1>
+            <h1 class="dashboard-title" style="text-transform: uppercase;">Adoption Requests</h1>
             
-            <p>All The Queries Listed</p>
+            <p>All adoption requests</p>
             <div class="table-section">
                 <div class="table-header">
                     <div>
@@ -124,29 +124,13 @@
                             <th scope="col" class="table-head-cell">Name</th>
                             <th scope="col" class="table-head-cell">Adress</th>
                             <th scope="col" class="table-head-cell">Contact</th>
-                            <th scope="col" class="table-head-cell">Detailed Query</th>
-                            <th scope="col" class="table-head-cell">Animal</th>
+                            <th scope="col" class="table-head-cell">Query</th>
+                            <th scope="col" class="table-head-cell">Breed</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr class="table-row">
-                            <td class="table-cell checkbox-cell">
-                                <div class="checkbox-container">
-                                    <input id="checkbox-table-search-1" type="checkbox" class="checkbox">
-                                    <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
-                                </div>
-                            </td>
-                            <th scope="row" class="table-cell user-info">
-                                <img class="user-avatar" src="/assets/dog.png" alt="image">
-                                <div class="user-details">
-                                    <div class="user-name">Aditya Binjagermath</div>
-                                    <div class="user-email">aditya2202@gmail.com</div>
-                                </div>
-                            </th>
-                            <td class="table-cell">221/222 Shivganga Nagar Part2 Jule Solapur </td>
-                            <td class="table-cell">8767598748</td>
-                            <td class="table-cell">I had accidently found a dog , bleeding from his left leg , urgently need a help</td>
-                            <td class="table-cell">Dog</td>
+                            
                         </tr>
                     </tbody>
                 </table>
@@ -155,5 +139,45 @@
     </main>
 
     <script src="/javascript/dashboard.js"></script>
+    <script>
+
+    document.addEventListener("DOMContentLoaded", () => {
+        // Get the adoption request data from localStorage
+        const adoptionRequest = JSON.parse(localStorage.getItem("adoptionRequest"));
+
+        if (adoptionRequest) {
+            // Find the table body
+            const tableBody = document.querySelector(".table tbody");
+
+            // Create a new row with the pet data
+            const newRow = document.createElement("tr");
+            newRow.classList.add("table-row");
+            newRow.innerHTML = `
+                <td class="table-cell checkbox-cell">
+                    <div class="checkbox-container">
+                        <input type="checkbox" class="checkbox">
+                    </div>
+                </td>
+                <th scope="row" class="table-cell user-info">
+                    <img class="user-avatar" src="${adoptionRequest.image}" alt="${adoptionRequest.name}">
+                    <div class="user-details">
+                        <div class="user-name">${adoptionRequest.name}</div>
+                        <div class="user-email">${adoptionRequest.email}</div>
+                    </div>
+                </th>
+                <td class="table-cell">${adoptionRequest.address}</td>
+                <td class="table-cell">${adoptionRequest.contact}</td>
+                <td class="table-cell">Adoption request for ${adoptionRequest.name}</td>
+                <td class="table-cell">${adoptionRequest.breed}</td>
+            `;
+
+            // Append the new row to the table body
+            tableBody.appendChild(newRow);
+
+            // Clear the adoption request from localStorage
+            localStorage.removeItem("adoptionRequest");
+        }
+    });
+</script>
 </body>
 </html>

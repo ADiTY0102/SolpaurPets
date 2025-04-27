@@ -8,7 +8,7 @@ let pets = [
         contact: "+91 9876543210",
         address: "123 Main St, Solpaur",
         breed: "Labrador",
-        tags: ["#dog"]
+        tags: ["#other"]
     },
     {
         name: "Max",
@@ -18,7 +18,7 @@ let pets = [
         contact: "+91 8765432109",
         address: "456 Oak Ave, Solpaur",
         breed: "German Shepherd",
-        tags: ["#dog"]
+        tags: ["#other"]
     },
     {
         name: "Luna",
@@ -28,7 +28,7 @@ let pets = [
         contact: "+91 7654321098",
         address: "789 Pine Rd, Solpaur",
         breed: "Golden Retriever",
-        tags: ["#dog"]
+        tags: ["#other"]
     },
     {
         name: "Whiskers",
@@ -38,7 +38,7 @@ let pets = [
         contact: "+91 6543210987",
         address: "321 Elm St, Solpaur",
         breed: "Persian",
-        tags: ["#cat"]
+        tags: ["#other"]
     },
     {
         name: "Fluffy",
@@ -48,7 +48,7 @@ let pets = [
         contact: "+91 5432109876",
         address: "654 Birch Ln, Solpaur",
         breed: "Maine Coon",
-        tags: ["#cat"]
+        tags: ["#other"]
     },
     {
         name: "Dobby",
@@ -121,6 +121,17 @@ function displayPets(petsToDisplay) {
                 <p><strong>Address:</strong> ${pet.address}</p>
             </div>
         `;
+
+        // Add click event to the pet card
+        petCard.addEventListener("click", () => {
+            const confirmAdoption = confirm(`Do you want to apply for adoption of ${pet.name}?`);
+            if (confirmAdoption) {
+                // Store pet data in localStorage
+                localStorage.setItem("adoptionRequest", JSON.stringify(pet));
+                // Redirect to rescue.html
+                window.location.href = "/pages/otherPets.html";
+            }
+        });
 
         petCardsContainer.appendChild(petCard);
     });

@@ -426,7 +426,12 @@ body {
     font-weight: 700;
     text-align: center;
 }
-
+.middle-part .data{
+    display: flex;
+    justify-content: space-between;
+    gap: 200px;
+    flex-direction: row;
+}
 
 
 
@@ -502,7 +507,7 @@ a{
     align-items: center;
     padding: 3vw 1.4vw;
     justify-content: space-between;
-    font-family: futura;
+    font-family: 'Futura PT', sans-serif;
 }
 
 #page4 .element {
@@ -798,7 +803,20 @@ button:focus {
 .form-group textarea {
     padding: 0.625rem;
 }
-
+#center-btn{
+    padding: 0.75rem 1.5rem;
+    font-size: 0.975rem;
+    font-weight: 500;
+    color: #ffffff;
+    background-color: #000000;
+    border: none;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    width: fit-content;
+}
+#center-btn:hover{
+    background-color: #1d4ed8;
+}
 button {
     padding: 0.75rem 1.25rem;
     font-size: 0.875rem;
